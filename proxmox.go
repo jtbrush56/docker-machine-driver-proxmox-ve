@@ -557,7 +557,7 @@ func (p ProxmoxVE) GetStorageType(node string, storagename string) (string, erro
 	}
 
 	for _, storage := range a.Data {
-		if storage.Storage == storagename {
+		if storage.storage == storagename {
 			return storage.Type, nil
 		}
 	}
